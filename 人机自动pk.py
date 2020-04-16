@@ -8,9 +8,9 @@ while True:
     i = 0
     while player_victory < 2 and enemy_victory < 2:
         i += 1
-        print('\n目前比分： %s 比 %s \n' % (player_victory,enemy_victory))
+        print('\n目前比分： {} 比 {} \n' .format(player_victory,enemy_victory))
         time.sleep(2)  # 让局与局之间有较明显的有时间间隔
-        print(' \n——————现在是第%s局——————' % i)  # 作为局的标记
+        print(' \n——————现在是第{}局——————' .format(i))  # 作为局的标记
 
         player_life = random.randint(100, 150)
         player_attack = random.randint(30, 50)
@@ -18,10 +18,10 @@ while True:
         enemy_attack = random.randint(30, 50)
 
         # 展示双方角色的属性
-        print('【玩家】\n 血量：%s \n攻击：%s' % (player_life,player_attack))
+        print('【玩家】\n 血量：{} \n攻击：{}' .format(player_life,player_attack))
         print('------------------------')
         time.sleep(1)
-        print('【敌人】\n 血量：%s \n攻击：%s' % (enemy_life,enemy_attack))
+        print('【敌人】\n 血量：{} \n攻击：{}' .format(enemy_life,enemy_attack))
         print('------------------------')
         time.sleep(1)
 
@@ -51,11 +51,11 @@ while True:
     # 判断最终结果
     if player_life > enemy_life:
         print('\n玩家胜利\n')
-        print('结果：%s比%s' % (player_victory,enemy_victory))
+        print('结果：{}比{}' .format(player_victory,enemy_victory))
 
     else:
         print('\n敌人\n')
-        print('结果：%s比%s' % (player_victory,enemy_victory))
+        print('结果：{}比{}' .format(player_victory,enemy_victory))
 
     # 在 while True 循环中设置跳出条件。
     a1 = raw_input('\n要继续游戏吗，请输入n退出，输入其他继续：')
