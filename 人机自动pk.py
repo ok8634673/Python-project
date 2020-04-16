@@ -7,7 +7,7 @@ enemy_victory = 0
 i = 0
 while player_victory < 2 and enemy_victory < 2:
     i += 1
-    print('\n目前比分：' + str(player_victory) + '比' + str(enemy_victory) + '\n')
+    print('\n目前比分： %s 比 %s \n' % (player_victory,enemy_victory))
     time.sleep(2)  # 让局与局之间有较明显的有时间间隔
     print(' \n——————现在是第' + str(i) + '局——————')  # 作为局的标记
 
@@ -17,10 +17,10 @@ while player_victory < 2 and enemy_victory < 2:
     enemy_attack = random.randint(30, 50)
 
     # 展示双方角色的属性
-    print('【玩家】\n' + '血量：' + str(player_life) + '\n攻击：' + str(player_attack))
+    print('【玩家】\n 血量：%s \n攻击：%s' % (player_life,player_attack))
     print('------------------------')
     time.sleep(1)
-    print('【敌人】\n' + '血量：' + str(enemy_life) + '\n攻击：' + str(enemy_attack))
+    print('【敌人】\n 血量：%s \n攻击：%s' % (enemy_life,enemy_attack))
     print('------------------------')
     time.sleep(1)
 
@@ -50,8 +50,8 @@ while player_victory < 2 and enemy_victory < 2:
 # 判断最终结果
 if player_life > enemy_life:
     print('\n玩家胜利\n')
-    print('结果：' + str(player_victory) + '比' + str(enemy_victory))
+    print('结果：%s比%s' % (player_victory,enemy_victory))
 
 else:
     print('\n敌人\n')
-    print('结果：' + str(player_victory) + '比' + str(enemy_victory))
+    print('结果：%s比%s' % (player_victory,enemy_victory))
