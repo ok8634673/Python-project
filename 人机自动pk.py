@@ -58,7 +58,7 @@ while True:
         print('结果：{}比{}' .format(player_victory,enemy_victory))
 
     # 在 while True 循环中设置跳出条件。
-    a1 = raw_input('\n要继续游戏吗，请输入n退出，输入其他继续：')
+    a1 = input('\n要继续游戏吗，请输入n退出，输入其他继续：')
     if a1 == 'n':
         print('游戏退出')
         break
